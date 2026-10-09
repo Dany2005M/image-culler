@@ -1,0 +1,39 @@
+# =========================
+# Python & Machine Learning
+# =========================
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# YOLOv8 Weights and Runs
+*.pt
+yolov8n.pt
+runs/
+
+# Test Photos (Prevent uploading massive image batches)
+*.jpg
+*.jpeg
+*.png
+test_photos/
+dataset/
+
+# =========================
+# Java & Spring Boot
+# =========================
+target/
+build/
+out/
+*.class
+*.jar
+*.war
+
+# =========================
+# IDE & OS Files
+# =========================
+.idea/
+*.iml
+.vscode/
+.DS_Store
