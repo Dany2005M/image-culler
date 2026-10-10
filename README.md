@@ -26,3 +26,6 @@ The application is built on a microservices-inspired architecture:
 3. Spring Boot routes the payload to the Python FastAPI microservice.
 4. Python executes YOLOv8 inference, processes the isolated crops via the LoG algorithm, and assigns a binary Keeper/Reject status.
 5. The JSON array is returned through the Java gateway to the frontend, instantly rendering a color-coded gallery grid.
+
+<img width="1314" height="957" alt="image" src="https://github.com/user-attachments/assets/52ae264a-e202-412e-a8da-fb7b297af5a6" />
+
