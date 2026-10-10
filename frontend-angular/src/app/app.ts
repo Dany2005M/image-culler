@@ -1,10 +1,10 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { UploadZone } from './components/upload-zone/upload-zone';
+import {UploadZoneComponent } from './components/upload-zone/upload-zone';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, UploadZone],
+  imports: [RouterOutlet, UploadZoneComponent],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

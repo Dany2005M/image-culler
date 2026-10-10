@@ -15,13 +15,13 @@ export class Culler {
   private gatewayUrl = 'http://localhost:8080/api/culler/evaluate-batch';
   private http = inject(HttpClient);
 
-  evaluateBatch(files: File[]): Observable<CullerResponse> {
+  evaluateBatch(files: File[]): Observable<CullerResponse[]> {
     const formData = new FormData();
     files.forEach(file => {
       formData.append('files', file);
     })
 
-    return this.http.post<CullerResponse>(this.gatewayUrl, formData)
+    return this.http.post<CullerResponse[]>(this.gatewayUrl, formData)
   }
 
 }

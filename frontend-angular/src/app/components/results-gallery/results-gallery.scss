@@ -1,0 +1,41 @@
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.25rem;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+
+  &.keeper {
+    border-left: 4px solid #10b981;
+    .badge { background: #d1fae5; color: #065f46; }
+  }
+
+  &.reject {
+    border-left: 4px solid #ef4444;
+    .badge { background: #fee2e2; color: #991b1b; }
+  }
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+
+  h4 { margin: 0; font-size: 1rem; word-break: break-all; }
+}
+
+.badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}

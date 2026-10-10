@@ -1,1 +1,33 @@
-<p>upload-zone works!</p>
+<div
+  class="drop-zone"
+  [class.active]="isDragging"
+  (dragover)="onDragOver($event)"
+  (dragleave)="onDragLeave($event)"
+  (drop)="onDrop($event)">
+
+  @if (!isProcessing()) {
+    <div>
+      <h3>Drag & Drop photos here</h3>
+      <p>or</p>
+      <input
+        type="file"
+        multiple
+        accept="image/*"
+        (change)="onFileSelect($event)"
+        #fileInput
+        style="display: none;">
+
+      <button (click)="fileInput.click()">Browse Files</button>
+    </div>
+  } @else {
+    <div class="loading-state">
+      <h3>Analyzing subjects with YOLOv8...</h3>
+      <p>Please wait.</p>
+    </div>
+  }
+</div>
+
+@if (results().length > 0) {
+  <app-results-gallery [evaluations]="results()"></app-results-gallery>
+}
+

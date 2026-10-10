@@ -1,1 +1,15 @@
-<p>results-gallery works!</p>
+<div class="gallery-grid">
+  @for (item of evaluations; track item.filename) {
+    <div class="card" [class.keeper]="item.keeper" [class.reject]="!item.keeper">
+      <div class="card-header">
+        <h4>{{ item.filename }}</h4>
+        <span class="badge">{{ item.keeper ? 'Keeper' : 'Reject' }}</span>
+      </div>
+      <div class="card-body">
+        <p>Sharpness: <strong>{{ item.sharpnessScore | number:'1.2-2' }}</strong></p>
+      </div>
+    </div>
+  } @empty {
+    <p>No evaluations to display.</p>
+  }
+</div>
